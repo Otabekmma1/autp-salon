@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block main %}
+<!--featured-cars start -->
+<section id="featured-cars" class="featured-cars">
+    <div class="container">
+        <div class="section-header">
+            <h2>Mashinalar</h2>
+        </div><!--/.section-header-->
+        <div class="featured-cars-content">
+            <div class="row">
+                {% for car in cars %}
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-featured-cars">
+                        <div class="featured-img-box">
+                            <div class="featured-cars-img">
+                                <img src="{{ car.image.url }}" alt="cars">
+                            </div>
+                        </div>
+                        <div class="featured-cars-txt">
+                            <h2><a href="#">{{ car.brand }} {{ car.model }}</a></h2>
+                            <h3>{{ car.price }}{{ car.price_types }}</h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div><!--/.container-->
+
+</section><!--/.featured-cars-->
+<!--featured-cars end -->
+{% endblock main %}

@@ -1,0 +1,95 @@
+<!--contact start-->
+<footer id="contact" class="contact">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <div class="footer-logo">
+                            <a href="{% url 'home' %}">Auto Salon</a>
+                        </div>
+
+                        <div class="footer-contact">
+                            <br>
+                            <br>
+                            <p>info@example.com</p>
+                            <p>+998991234567</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h2>about devloon</h2>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">career</a></li>
+                            <li><a href="#">terms <span> of service</span></a></li>
+                            <li><a href="#">privacy policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-12">
+                    <div class="single-footer-widget">
+                        <h2>top brendlar</h2>
+                        <div class="row">
+                            {% for brand in brands %}
+                            <div class="col-md-7 col-xs-6">
+                                <ul>
+                                    <li><a href="{% url 'brand_id' brand.id %}">{{ brand.name }}</a></li>
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-1 col-md-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h2>yangiliklar xati</h2>
+                        <div class="footer-newsletter">
+                            <p>
+                                Eng so'nggi yangiliklar va ma'lumotlarni olish uchun obuna bo'ling
+                            </p>
+                        </div>
+                        <div class="hm-foot-email">
+                            <div class="foot-email-box">
+                                <input type="text" class="form-control" placeholder="Pochtangizni kiriting">
+                            </div><!--/.foot-email-box-->
+                            <div class="foot-email-subscribe">
+                                <span><i class="fa fa-arrow-right"></i></span>
+                            </div><!--/.foot-email-icon-->
+                        </div><!--/.hm-foot-email-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        &copy; copyright.designed and developed by <a href="https://www.themesine.com/">Otabek
+                        Qosimov</a>.
+                    </p><!--/p-->
+                </div>
+                <div class="col-sm-6">
+                    <div class="footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.footer-copyright-->
+    </div><!--/.container-->
+
+    <div id="scroll-Top">
+        <div class="return-to-top">
+            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
+               data-original-title="Back to Top" aria-hidden="true"></i>
+        </div>
+
+    </div><!--/.scroll-Top-->
+
+</footer><!--/.contact-->
+<!--contact end-->
