@@ -204,9 +204,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*-------------------------------------
         3.  Welcome-hero
 --------------------------------------*/
+
+
 .welcome-hero {
     position: relative;
-    background:url(../images/welcome-hero/welcome-banner.jpg)no-repeat;
+    background:url(..images/welcome-hero/lam_logo.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 1;
@@ -216,7 +218,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     content: "";
     top: 0;
     left: 0;
-    width: 100%;
+    width: 70%;
     height: 100%;
     background: rgba(42,45,84,.60);
 }
@@ -325,7 +327,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*-------------------------------------
         5. Service 
 --------------------------------------*/
-.service { padding: 260px 0 87px;}
+.service { padding: 200px 0 87px;}
 
 .single-service-item{
     text-align: center;

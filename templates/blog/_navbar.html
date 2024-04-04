@@ -5,14 +5,29 @@
 
 
 <!--welcome-hero start -->
-<section id="home" class="welcome-hero">
-
+<section id="home">
+  <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://kartinki.pics/pics/uploads/posts/2022-08/1659760581_1-kartinkin-net-p-oboi-lamborgini-krasivo-1.jpg');
+      height: 800px;
+    "
+  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3 display-1 text-white" style="font-size: 90px">Avto Salonga</h1>
+          <h4 class="mb-3 display-2 text-white" style="font-size: 50px">Xush kelibsiz</h4>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- top-area Start -->
     <div class="top-area">
         <div class="header-area">
             <!-- Start Navigation -->
-            <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
-                 data-minus-value-mobile="55" data-speed="1000">
+            <nav class="navbar  navbar-default bootsnav navbar-expand-lg navbar-sticky navbar-scrollspy fixed-top" data-minus-value-desktop="70"
+                 data-minus-value-mobile="55" data-speed="100">
 
                 <div class="container">
 
@@ -29,10 +44,9 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li class=" scroll active"><a href="{% url 'home' %}">Bosh sahifa</a></li>
-                            <li class="scroll"><a href="#service">Xizmat</a></li>
-                            <li class="scroll"><a href="#featured-cars">Mashinalar</a></li>
+                            <li class=" scroll active"><a href="#home">Bosh sahifa</a></li>
                             <li class="scroll"><a href="#brand">Brandlar</a></li>
+                            <li class="scroll"><a href="#featured-cars">Mashinalar</a></li>
                             <li class="scroll"><a href="#contact">Aloqa</a></li>
                         </ul><!--/.nav -->
                     </div><!-- /.navbar-collapse -->
@@ -45,17 +59,8 @@
     </div><!-- /.top-area-->
     <!-- top-area End -->
 
-    <div class="container">
-        <div class="welcome-hero-txt">
-            <h2>get your desired car in resonable price</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-            </p>
-            <button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
-        </div>
-    </div>
-
 
 </section><!--/.welcome-hero-->
 <!--welcome-hero end -->
+
+

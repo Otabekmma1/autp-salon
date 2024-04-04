@@ -1,38 +1,27 @@
-<!--service start -->
-<section id="service" class="service">
+
+<!--brand strat -->
+<section id="brand" class="brand">
     <div class="container">
-        <div class="service-content">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-service-item">
-                        <div class="single-service-icon">
-                            <i class="flaticon-car"></i>
-                        </div>
-                        <h2><a href="#">Eng Yirik Avtomabil dileri <span> of</span> car</a></h2>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-service-item">
-                        <div class="single-service-icon">
-                            <i class="flaticon-car-repair"></i>
-                        </div>
-                        <h2><a href="#">Cheksiz Ta'mirlash Kafolati</a></h2>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-service-item">
-                        <div class="single-service-icon">
-                            <i class="flaticon-car-1"></i>
-                        </div>
-                        <h2><a href="#">Sug'urta Yordami</a></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+             <div class="section-header">
+            <h2 class="">Brendlar</h2>
+        </div><!--/.section-header-->
+        <div class="brand-area">
+            <div class="owl-carousel owl-theme brand-item">
+                {% for brand in brands %}
+                <div class="item">
+                    <a href="{% url 'brand_id' brand.id %}">
+                        <img src="{{ brand.image.url }}" alt="brand-image"/>
+                    </a>
+                    <h3 class="text-center">{{ brand.name }}</h3>
+                </div><!--/.item-->
+                {% endfor %}
+            </div><!--/.owl-carousel-->
+        </div><!--/.clients-area-->
+
     </div><!--/.container-->
 
-</section><!--/.service-->
-<!--service end-->
+</section><!--/brand-->
+<!--brand end -->
 
 <!--new-cars start -->
 <section id="new-cars" class="new-cars">
@@ -41,7 +30,6 @@
             <h2>Eng yangi mashinalar</h2>
         </div><!--/.section-header-->
         <div class="new-cars-content">
-            <div class="owl-carousel owl-theme" id="new-cars-carousel">
                 {% for car in three_cars %}
                 <div class="new-cars-item">
                     <div class="single-new-cars-item">
@@ -57,15 +45,15 @@
                                     <p>{{ car.about|truncatewords:60 }}</p>
                                     <button class="welcome-btn new-cars-btn"
                                             onclick="window.location.href='{% url 'car_detail' car.id %}'">
-                                        Ma'lumotlarni ko'rish
+                                        Ishlamedi hozircha
                                     </button>
+                                    <hr>
                                 </div><!--/.new-cars-txt-->
                             </div><!--/.col-->
                         </div><!--/.row-->
                     </div><!--/.single-new-cars-item-->
                 </div><!--/.new-cars-item-->
                 {% endfor %}
-            </div><!--/#new-cars-carousel-->
         </div><!--/.new-cars-content-->
     </div><!--/.container-->
 
@@ -89,8 +77,9 @@
                             </div>
                         </div>
                         <div class="featured-cars-txt">
-                            <h2><a href="{% url 'car_detail' car.id %}">{{ car.brand }} {{ car.model }}</a></h2>
-                            <h3>{{ car.price }}{{ car.price_types }}</h3>
+                            <h3 >Brand: {{ car.brand }}</h3>
+                            <h3>Model: {{ car.model }}</h3>
+                            <h3>Narxi: {{ car.price }}{{ car.price_types }}</h3>
                         </div>
                     </div>
                 </div>
@@ -102,25 +91,6 @@
 </section><!--/.featured-cars-->
 <!--featured-cars end -->
 
-<!--brand strat -->
-<section id="brand" class="brand">
-    <div class="container">
-        <div class="brand-area">
-            <div class="owl-carousel owl-theme brand-item">
-                {% for brand in brands %}
-                <div class="item">
-                    <a href="{% url 'brand_id' brand.id %}">
-                        <img src="{{ brand.image.url }}" alt="brand-image"/>
-                    </a>
-                </div><!--/.item-->
-                {% endfor %}
-            </div><!--/.owl-carousel-->
-        </div><!--/.clients-area-->
-
-    </div><!--/.container-->
-
-</section><!--/brand-->
-<!--brand end -->
 
 <!--blog start -->
 <section id="blog" class="blog"></section><!--/.blog-->
